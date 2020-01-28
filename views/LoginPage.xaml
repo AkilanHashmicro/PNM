@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"              
+             x:Class="SalesApp.views.LoginPage" BackgroundColor="White">
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout VerticalOptions="StartAndExpand" Padding="10, 0, 12, 0" x:Name="loginFormLayout" BackgroundColor="White">
+                <Image WidthRequest="250" HeightRequest="250" VerticalOptions="Center" HorizontalOptions="Center" >
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource"
+                              iOS="loginPageLogo.png"
+                              Android="loginPageLogo.png" />
+                    </Image.Source>
+                </Image>
+                <StackLayout VerticalOptions="StartAndExpand" Padding="0, 0, 12, 0" Spacing="0" x:Name="loginStockLayout">
+                    <!--<Entry x:Name="urlEntry" Text="http://salesapp.hashmicro.com"  Unfocused="URLTextChanged"/>-->
+                    <Entry Text="http://beta-dev2.hashmicro.com" IsEnabled="False"/>
+                    <!--<Label x:Name="urlAlert" Text="Invalid URL" HorizontalTextAlignment="Start" TextColor="Red" IsVisible="False"  FontSize="Micro"/>-->
+                    <BoxView Color="Transparent" HeightRequest="2"/>
+                    <!--<Picker x:Name="dbPicker" IsVisible="False"/>-->
+                    <Entry Text="PNM" IsEnabled="False"/>
+                    <Label x:Name="dbPickerAlert" Text="" HorizontalTextAlignment="Start" TextColor="Red" IsVisible="False"  FontSize="Micro"/>
+                    <BoxView Color="Transparent" HeightRequest="2"/>
+                    <Entry x:Name="loginEntry" Placeholder="Login"/>
+                    <Label x:Name="loginAlert" Text="" HorizontalTextAlignment="Start" TextColor="Red" IsVisible="False"  FontSize="Micro"/>
+                    <BoxView Color="Transparent" HeightRequest="2"/>
+                    <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="Password"/>
+                    <Label x:Name="passwordAlert" Text="" HorizontalTextAlignment="Start" TextColor="Red" IsVisible="False"  FontSize="Micro"/>
+                    <BoxView HeightRequest="20"/>
+                    <Button x:Name="signInButton" Text="Log In" Clicked="SignInActionAsync" HeightRequest="40" HorizontalOptions="FillAndExpand" TextColor="White" BackgroundColor="#921B1D"/>
+                    <BoxView HeightRequest="10"/>
+                    <Label x:Name="loginfailedAlert" Text="" HorizontalTextAlignment="Center" TextColor="Red" IsVisible="False"  FontSize="Micro"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Padding="0, 60, 12, 0" Orientation="Horizontal">
+                    <Label x:Name="powered_by" Text="Powered By" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="Micro" VerticalTextAlignment="Center"/>
+                    <Label x:Name="by_hashmicro" Text="HashMicro" HorizontalTextAlignment="Start" FontAttributes="Bold" TextColor="Gray" FontSize="Small" VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>  

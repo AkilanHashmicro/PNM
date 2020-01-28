@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="SalesApp.wizard.CrmLeadDetailWizard">
+    <ScrollView>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Details" x:Name="head_title" TextColor="White" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#414141" HorizontalOptions="FillAndExpand" HeightRequest="50" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <BoxView HeightRequest="10" BackgroundColor="White"/>
+
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" x:Name="btnStack">
+                <Button x:Name="ButtonMarkWon" Clicked="ButtonMarkWon_ClickedAsync" Text="Mark Won"  BackgroundColor="#414141" TextColor="White"/>
+                <Button x:Name="ButtonMarkLost" Clicked="ButtonMarkLost_Clicked" Text="Mark Lost" BackgroundColor="#414141" TextColor="White"/>
+                <Button x:Name="ButtonNewQuotation" Clicked="ButtonNewQuotation_Clicked" Text="New Quotation" BackgroundColor="#414141" TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="Convertbtn"  Text="Convert To Opportunities" Clicked="Convertbtn_Clicked"  BackgroundColor="#414141" TextColor="White"/>
+            </StackLayout>
+            
+            <StackLayout Padding="5,5,5,0">
+                <Label x:Name="CrmNameValue" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+            
+            <Grid BackgroundColor="White" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".40*"/>
+                    <ColumnDefinition Width=".60*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                    <Label Text="Expected Revenue" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                    <Label  x:Name="ExpectedRevenueValue" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Probability" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+                    <Label  x:Name="ProbabilityValue" TextColor="Black" Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="Customer" TextColor="Black" Grid.Row="2" Grid.Column="0"/>
+                    <Label  x:Name="CustomerNameValue" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
+
+                    <Label Text="Email" TextColor="Black" Grid.Row="3" Grid.Column="0"/>
+                    <Label  x:Name="EmailValue" TextColor="Black" Grid.Row="3" Grid.Column="1"/>
+
+                    <Label Text="Phone" TextColor="Black" Grid.Row="4" Grid.Column="0"/>
+                    <Label  x:Name="PhoneValue" TextColor="Black" Grid.Row="4" Grid.Column="1"/>
+
+                    <Label Text="Team" TextColor="Black" Grid.Row="5" Grid.Column="0"/>
+                    <Label  x:Name="TeamValue" TextColor="Black" Grid.Row="5" Grid.Column="1"/>
+
+                    <Label Text="Next Activity" TextColor="Black" Grid.Row="6" Grid.Column="0"/>
+                    <Label  x:Name="NextActivityValue" TextColor="Black" Grid.Row="6" Grid.Column="1"/>
+
+                    <Label Text="Activity Date" TextColor="Black" Grid.Row="7" Grid.Column="0"/>
+                    <Label  x:Name="NextActivityDateValue" TextColor="Black" Grid.Row="7" Grid.Column="1"/>
+
+                    <Label Text="Activity Desc" TextColor="Black" Grid.Row="8" Grid.Column="0"/>
+                    <Label  x:Name="ActivityDescritionValue" TextColor="Black" Grid.Row="8" Grid.Column="1"/>
+
+                    <Label Text="Expected Closing" TextColor="Black" Grid.Row="9" Grid.Column="0"/>
+                    <Label  x:Name="expectedClosingValue" TextColor="Black" Grid.Row="9" Grid.Column="1"/>
+
+                    <Label Text="Rating" TextColor="Black" Grid.Row="10" Grid.Column="0"/>
+                    <StackLayout x:Name="RatingLayout3" Padding="1" Orientation="Horizontal" IsVisible="false"  Grid.Row="10" Grid.Column="1">
+                        <Image Source="star.png" WidthRequest="15" HeightRequest="15"/>
+                        <Image Source="star.png" WidthRequest="15" HeightRequest="15"/>
+                        <Image Source="star.png" WidthRequest="15" HeightRequest="15"/>
+                    </StackLayout>
+                    <StackLayout x:Name="RatingLayout2" Padding="1" Orientation="Horizontal" IsVisible="false" Grid.Row="10" Grid.Column="1">
+                        <Image Source="star.png" WidthRequest="15" HeightRequest="15"/>
+                        <Image Source="star.png" WidthRequest="15" HeightRequest="15"/>
+                    </StackLayout>
+                    <StackLayout x:Name="RatingLayout1" Padding="1" Orientation="Horizontal" IsVisible="false" Grid.Row="10" Grid.Column="1">
+                        <Image Source="star.png" WidthRequest="15" HeightRequest="15"/>
+                    </StackLayout>                
+                </Grid>
+
+                <StackLayout Padding="5,5,5,0">
+                    <Label TextColor="Black" FontSize="Medium" Text="Contact Address" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                    <BoxView HeightRequest="5" BackgroundColor="White"/>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".40*"/>
+                            <ColumnDefinition Width=".60*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Label Text="Customer Name" TextColor="Black" Grid.Row="0" Grid.Column="0"/>
+                        <Label  x:Name="ContactCustomerValue" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+
+                        <Label Text="Address" TextColor="Black" Grid.Row="1" Grid.Column="0"/>
+                        <Label  x:Name="StreetValue" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
+                        <Label  x:Name="Street2Value" TextColor="Black" Grid.Row="3" Grid.Column="1"/>
+                        <Label  x:Name="CityValue" TextColor="Black" Grid.Row="4" Grid.Column="1"/>
+                        <Label  x:Name="CountryValue" TextColor="Black" Grid.Row="5" Grid.Column="1"/>
+
+                        <Label Text="Contact Name" TextColor="Black" Grid.Row="7" Grid.Column="0"/>
+                        <Label  x:Name="ContactNameValue" TextColor="Black" Grid.Row="7" Grid.Column="1"/>
+
+                        <Label Text="Mobile" TextColor="Black" Grid.Row="8" Grid.Column="0"/>
+                        <Label  x:Name="ContactMobileValue" TextColor="Black" Grid.Row="8" Grid.Column="1"/>                        
+                    </Grid>
+                </StackLayout>
+
+                <BoxView HeightRequest="10"/>
+                
+            </StackLayout>
+        </StackLayout>
+        
+    </ScrollView>
+</pages:PopupPage>

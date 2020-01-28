@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SalesApp.views.CustomerListviewDetailPage" Title="Customer Details" BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+
+    <StackLayout Padding="5">
+                 <StackLayout Padding="2,2,2,2" BackgroundColor="#7c7bad">
+                            <StackLayout BackgroundColor="White">
+                <Grid>
+                               
+                         <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".31*"/>
+                                <ColumnDefinition Width=".01*"/>
+                                <ColumnDefinition Width=".36*"/>
+                                 <ColumnDefinition Width=".01*"/>
+                                <ColumnDefinition Width=".31*"/>
+                       </Grid.ColumnDefinitions>
+
+                    
+                <StackLayout Grid.Row="0" Grid.Column="0" Padding="5,5,5,0">
+
+                 <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="meetingStackClicked" NumberOfTapsRequired="1">
+                    </TapGestureRecognizer>
+                 </StackLayout.GestureRecognizers>
+                                                  
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center"  Padding="5,5,0,0">
+                                <Image Source="clockdark.png" HeightRequest="24" x:Name="meet_image" />                            
+                                <Label Text="" FontSize="Medium" TextColor="Black" x:Name="meeting_text" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>                               
+                             </StackLayout>                                                       
+                        <StackLayout>
+                             <Label Text="Meetings" FontSize="Small" HorizontalTextAlignment="Center" />
+                        </StackLayout>                            
+                     </StackLayout> 
+
+                           <StackLayout Grid.Row="0" Grid.Column="1" >
+                                            <BoxView WidthRequest="1" VerticalOptions="FillAndExpand" Color="#7c7bad"/>
+                            </StackLayout>
+
+                    <StackLayout Grid.Row="0" Grid.Column="2" Padding="5,5,5,0">
+
+                                 <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="oppoClicked" NumberOfTapsRequired="1">
+                    </TapGestureRecognizer>
+                 </StackLayout.GestureRecognizers>
+                                                   
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,5,0,0">
+                                <Image Source="starimg64.png" HeightRequest="24" />                            
+                                <Label Text="" FontSize="Medium" TextColor="Black" x:Name="oppo_text" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>                               
+                             </StackLayout>                                                       
+                        <StackLayout>
+                             <Label Text="Opportunities" FontSize="Small" HorizontalTextAlignment="Center"/>
+                        </StackLayout>                            
+                     </StackLayout> 
+
+                              <StackLayout Grid.Row="0" Grid.Column="3" >
+                                            <BoxView WidthRequest="1" VerticalOptions="FillAndExpand" Color="#7c7bad"/>
+                            </StackLayout>
+
+                       <StackLayout Grid.Row="0" Grid.Column="4" Padding="5,5,5,0">
+
+                                <StackLayout.GestureRecognizers>
+                                     <TapGestureRecognizer  Tapped="saleClicked" NumberOfTapsRequired="1">
+                                     </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                                                  
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Padding="5,5,0,0">
+                                <Image Source="dollar1.png" HeightRequest="24"  />                            
+                                <Label Text="" FontSize="Medium" TextColor="Black" x:Name="sales_text" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>                               
+                             </StackLayout>                                                       
+                        <StackLayout>
+                             <Label Text="Sales" FontSize="Small" HorizontalTextAlignment="Center" />
+                        </StackLayout> 
+                                
+                     </StackLayout>           
+                                                                           
+                  </Grid>
+                          </StackLayout>
+                        </StackLayout>
+                        <BoxView HeightRequest="10" Color="Transparent"/>                
+                  <Grid>
+                    
+                <Grid.ColumnDefinitions> 
+                    <ColumnDefinition Width=".50*"/>
+                    <ColumnDefinition Width=".50*"/>                                      
+                </Grid.ColumnDefinitions>
+
+                 <Grid.RowDefinitions> 
+                      <RowDefinition Height="*"/>                                     
+                       </Grid.RowDefinitions>
+                
+                <StackLayout Grid.Column="0" Padding="10,0,0,0" VerticalOptions="Center">                         
+                    <Image Source="" x:Name="cus_image" HeightRequest="150"/>
+                 </StackLayout>
+                        
+                <StackLayout Grid.Column="1" Padding="10">                                                                                            
+                    <Label x:Name="name" Text="" FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" Margin="0,10,0,0"/>
+                    <Label x:Name ="email" Text="" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0"/>                                   
+                   <Label x:Name="mobile_No" HorizontalTextAlignment="Center" Text="" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0"/>                                                                                                                             
+                </StackLayout>
+                
+              </Grid>
+
+              <BoxView HeightRequest="10" Color="Transparent"/>
+            
+                  <Grid Padding="20,0,0,0">
+                        
+                <Grid.ColumnDefinitions> 
+                    <ColumnDefinition Width=".25*"/>
+                    <ColumnDefinition Width=".75*"/>                                      
+                </Grid.ColumnDefinitions>
+
+                 <Grid.RowDefinitions> 
+                      <RowDefinition Height="Auto"/>                                     
+                 </Grid.RowDefinitions>
+                                                   
+                    <Label Text="Address :" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" FontSize="Medium"/>
+
+                        <StackLayout Grid.Row="0" Grid.Column="1">
+                         <Label Text="1" x:Name="street"/>
+                         <Label Text="1" x:Name="city"/>
+                          <Label Text="1" x:Name="zip"/>
+                          <!--<Label Text="1" x:Name="street4"/>-->
+                         </StackLayout>
+                                        
+                     </Grid>
+
+            <BoxView HeightRequest="10" Color="Transparent"/>
+
+            <Grid Padding="20,0,0,0">                        
+                <Grid.ColumnDefinitions> 
+                    <ColumnDefinition Width=".25*"/>
+                    <ColumnDefinition Width=".75*"/>                                      
+                </Grid.ColumnDefinitions>
+                <Label Text="Website :" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" FontSize="Medium"/>
+                <Label x:Name="web_text" Grid.Row="0" Grid.Column="1" Text=""/>                
+             </Grid>
+
+            <BoxView HeightRequest="10" Color="Transparent"/>
+            
+              <Grid Padding="20,0,0,0">                        
+                <Grid.ColumnDefinitions> 
+                    <ColumnDefinition Width=".25*"/>
+                    <ColumnDefinition Width=".75*"/>                                      
+                </Grid.ColumnDefinitions>
+                <Label Text="Tags :" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" FontSize="Medium"/>
+
+                    <Grid Grid.Row="0" Grid.Column="1" x:Name="tags_grid"/>
+                            
+             </Grid>
+
+                <BoxView HeightRequest="10" Color="Transparent"/>
+                
+             <StackLayout Padding="20,0,0,0">
+                <Label Text="Contacts :" FontAttributes="Bold" FontSize="Medium"/>                
+            </StackLayout>
+
+            <StackLayout VerticalOptions="FillAndExpand">
+
+                         <ListView x:Name="CusListView" RowHeight="90" ItemTapped="CusListView_ItemTapped">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell Tapped="ViewCell_Tapped">
+                                        <Grid Padding="0,10,0,10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width=".3*" />
+                                                <ColumnDefinition Width=".6*" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout Grid.Row="0" Grid.Column="0">
+                                                <Image Source="{Binding CustomerImg}" HeightRequest="50" />
+                                            </StackLayout>
+                                            <StackLayout Grid.Row="0" Grid.Column="1" >
+                                                <Label Text="{Binding name}" TextColor="Gray" FontSize="Small" FontAttributes="Bold"/>
+                                                <Label Text="{Binding position}"  />
+                                            </StackLayout>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+               </StackLayout>
+            
+     </StackLayout>
+            </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
